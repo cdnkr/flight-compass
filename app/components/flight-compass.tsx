@@ -101,9 +101,12 @@ export default function FlightCompass({
           <div className="flex items-center">
             <input
               readOnly={hasDeviceOrientationSupport}
-              className="w-[123px] text-center text-6xl bg-transparent inline"
+              className="text-center text-6xl bg-transparent inline"
               value={direction?.degrees || 0}
               onChange={(e) => handleDirectionChange(e)}
+              style={{
+                width: `${String(direction?.degrees || 0).length}ch`,
+              }}
             />
             <p className="text-6xl text-center">°&nbsp;{direction?.cardinal}</p>
           </div>
