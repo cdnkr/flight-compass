@@ -65,8 +65,17 @@ export default function Main() {
       <div className="mb-2 md:mb-6">
         <h1 className="text-2xl font-bold uppercase">Flight Compass</h1>
         <p className="text-gray-400 text-sm uppercase">
-          Planes within {PLANS_WITHIN_RADIUS_KM}km. Data updates every minute. {process.env.NEXT_PUBLIC_USE_MOCK_DATA && <i className='lowercase text-red-500'>(using mock data)</i>}
+          Planes within {PLANS_WITHIN_RADIUS_KM}km. Data updates every minute. {process.env.NEXT_PUBLIC_USE_MOCK_DATA && <i className='lowercase text-orange-500'>(using mock data)</i>}
         </p>
+        {!hasDeviceOrientationSupport && (
+          <div className="mt-2">
+            <p className="text-orange-700">
+              <b>Your device does not support the orientation API.</b><br />You can manually
+              input your heading by clicking on the heading indicator in the
+              centre of the compass.
+            </p>
+          </div>
+        )}
       </div>
       {compassPermission !== 'granted' ? (
         <button
