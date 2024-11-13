@@ -8,7 +8,7 @@ export async function getFlights(params: {
   longitude: number
   radiusKM: number
 }) {
-  if (process.env.NEXT_PUBLIC_USE_MOCK_DATA) return MOCK_FLIGHTS_1
+  if (process.env.NEXT_PUBLIC_USE_MOCK_DATA === 'true') return MOCK_FLIGHTS_1
 
   const { latitude, longitude, radiusKM } = params
 
