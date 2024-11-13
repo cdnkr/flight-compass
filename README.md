@@ -2,6 +2,8 @@
 
 This is a simple app that shows the direction of flights around you. Point your device in the direction of a flight to see the details.
 
+![screenshot](https://utfs.io/f/Wv1sRGMowdW8rOgLukJLyHh5FXu8msTKP9jGq3UdcEk6oYJz)
+
 Originally cloned and built from [https://github.com/vercel-labs/next-flights](https://github.com/vercel-labs/next-flights)
 
 ## Getting started
