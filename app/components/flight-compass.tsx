@@ -175,7 +175,7 @@ export default function FlightCompass({
                   </p>
                   <div className="grid grid-cols-2 gap-1">
                     <KeyValueItem
-                      label="Org"
+                      label="Orig"
                       value={`${planeInRange.orig_iata}`}
                     />
                     <KeyValueItem
